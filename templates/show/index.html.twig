@@ -9,12 +9,9 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Hello! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/s2300102/Desktop/BCHelsinki/Symfony/teampractice/src/Controller/ShowController.php'|file_link(0) }}">src/Controller/ShowController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/s2300102/Desktop/BCHelsinki/Symfony/teampractice/templates/show/index.html.twig'|file_link(0) }}">templates/show/index.html.twig</a></code></li>
-    </ul>
+    This question is: {{ question_text }}
+   
 </div>
 {% endblock %}

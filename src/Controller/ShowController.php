@@ -9,11 +9,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ShowController extends AbstractController
 {
-    #[Route('/question/{slug}', name: 'app_show')]
-    public function index(Request $question) 
+    #[Route('/question/{some_question}', name: 'app_show')]
+    public function index($some_question): Response 
     {
-        return new Response ($this->render('show/index.html.twig', [
-            'controller_name' => '$question',
-        ]))
-    };
+        return $this->render('show/index.html.twig', [
+            'question_text' => $some_question
+        ]);
+    }
 }
