@@ -11,7 +11,12 @@
 <div class="example-wrapper">
     <h1>Hello! ✅</h1>
 
-    This question is: {{ question_text }}
+    {{ question_text }}
+
+    <h2>Waiting for answer...</h2>
+    {% for answer in ans_array %}
+        <p>{{ answer }}</p>
+    {% endfor %}
    
 </div>
 {% endblock %}

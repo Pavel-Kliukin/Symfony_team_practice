@@ -11,9 +11,15 @@ class ShowController extends AbstractController
 {
     #[Route('/question/{some_question}', name: 'app_show')]
     public function index($some_question): Response 
-    {
-        return $this->render('show/index.html.twig', [
-            'question_text' => $some_question
+    {   
+        $answers = ['answer1', 'answer2', 'answer3'];
+
+        $formattedquestion = ucwords(str_replace('_', ' ', $some_question));
+        $message = sprintf("The question is: %s?", $formattedquestion);
+
+        return $this->render('question/show.html.twig', [
+            'question_text' => $message,
+            'ans_array' => $answers
         ]);
     }
 }
