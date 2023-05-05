@@ -18,8 +18,8 @@ class ShowController extends AbstractController
         $message = sprintf("The question is: %s?", $formattedquestion);
 
         return $this->render('question/show.html.twig', [
-            'question_text' => $message,
-            'ans_array' => $answers
+            'question' => $message,
+            'answers' => $answers
         ]);
     }
 }
